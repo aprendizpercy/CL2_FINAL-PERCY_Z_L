@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:th="http://www.thymeleaf.org"
+          xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+		 
+        <center> <img src="https://lh4.googleusercontent.com/bkH5lTIVbGx4em7drn0i64o1s7-sdUlzegPiCkHHpMzvZ3AEKN3bRwxC2gfNiKoX_hYrFH2L6c9n_xV9xDR9ySyrsG_4jViz76l65k6CCDo7qcpyJTNT5IzX8s5gfwRbPw=w1280" alt=""  
+         width="400" height="200"></center>
+        
+        <title>CL2_CRUD PERSONAS</title>
+         
+        <marquee bgcolor="#006699" behavior="alternate" direction="right">
+<b><font color="#FFFFCC" size="5">DESARROLLO DE APLICACIONES WEB I
+PROFESOR: Arthur Mauricio
+  </font></b>
+</marquee>
+         
+<body>    
+         
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        
+    </head>
+        
+        
+    <body>
+		<center>   
+        <div class="container mt-4">
+			 
+              <div class="col-sm-6">
+				   
+				  
+			 <form th:action="@{/save}" th:object=${persona} method="POST">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Modulo Persona</h3>
+                        </div>
+                       	  
+                 <div class="card-body">
+                              <div class="form-group">
+                                
+                				<p align="left"><label>ID</label> </p> 
+                                <input th:field="*{id}" type="text" class="form-control">
+                                <p align="left"> <label>NOMBRE</label> </p> 
+                                <input th:field="*{nombre}" type="text" class="form-control">
+                                 <p align="left"><label>APELLIDO</label></p> 
+                                <input th:field="*{apellido}" type="text" class="form-control">
+                                  <p align="left"><label>DNI</label></h5></p>
+                                <input th:field="*{dni}" type="text" class="form-control">
+                                 <p align="left"> <label>EDAD</label></h5></p>
+                                <input th:field="*{edad}" type="text" class="form-control"> 
+                               
+                               
+                            </div>  
+                        </div>  
+                        <center> <div class="card-footer">
+                            <input type="submit" value="Guardar" class="btn btn-success"></center> 
+                            <input type="submit" value="Listar" class="btn btn-success"></center> 
+                        </div> 
+                        
+                    </div>
+                </form>   
+            </div>
+        </div></center>
+    </body>
+</html>
+
+
+
+ 
